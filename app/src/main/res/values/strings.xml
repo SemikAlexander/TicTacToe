@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="start_game">Start game</string>
+    <string name="settings_game">Settings</string>
+    <string name="win_game_string">You win!</string>
+    <string name="lose_game_string">You lose!</string>
+    <string name="again_game">Play again?</string>
+    <string name="draw_game_string">Draw!</string>
+    <string name="single_game_mode">Single player</string>
+    <string name="multiplayer_game_mode">Multiplayer</string>
+    <string name="x_player_win_game">Player X win!</string>
+    <string name="o_player_win">Player O win!</string>
+</resources>

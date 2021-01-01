@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultGameFragment"
+    android:background="?attr/colorPrimary">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/win_game_string"
+        android:textColor="@color/white"
+        android:textSize="65dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="112dp"/>
+
+    <ImageView
+        android:id="@+id/resultImageView"
+        android:layout_width="180dp"
+        android:layout_height="155dp"
+        android:src="@mipmap/won"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="210dp"/>
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="220dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        android:text="@string/again_game"
+        android:textSize="20dp"/>
+
+</FrameLayout>
