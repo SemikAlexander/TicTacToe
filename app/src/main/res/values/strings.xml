@@ -10,4 +10,5 @@
     <string name="multiplayer_game_mode">Multiplayer</string>
     <string name="x_player_win_game">Player X win!</string>
     <string name="o_player_win">Player O win!</string>
+    <string name="save_settings">Save settings</string>
 </resources>

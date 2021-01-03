@@ -8,8 +8,10 @@
 <!--        <item name="background">android:t</item>-->
     </style>
 
-    <style name="CustomDatePickerDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+    <style name="Theme.TicTacToeNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_main</item>
+        <item name="colorPrimaryVariant">@color/dark_second</item>
+        <item name="colorOnPrimary">@color/white</item>
     </style>
 </resources>

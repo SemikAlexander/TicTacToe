@@ -11,4 +11,6 @@
     <color name="blue_back1">#14BDAC</color>
     <color name="blue_for_button">#AAC5D0</color>
     <color name="blue_for_button1">#0DA192</color>
+    <color name="dark_main">#303030</color>
+    <color name="dark_second">#5A595B</color>
 </resources>
