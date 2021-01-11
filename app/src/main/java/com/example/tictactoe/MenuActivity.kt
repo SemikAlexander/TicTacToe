@@ -24,11 +24,15 @@ class MenuActivity : AppCompatActivity() {
 
         binding.apply {
             singleGameButton.setOnClickListener {
-                startActivity(Intent(this@MenuActivity, GameActivity::class.java).putExtra("game_mode", "single"))//startActivity<SingleplayerActivity>()
+                startActivity<GameActivity> {
+                    putExtra("game_mode", "single")
+                }
             }
 
             multiplayerGameButton.setOnClickListener {
-                startActivity(Intent(this@MenuActivity, GameActivity::class.java).putExtra("game_mode", "multi"))
+                startActivity<GameActivity> {
+                    putExtra("game_mode", "multi")
+                }
             }
 
             settingsButton.setOnClickListener {

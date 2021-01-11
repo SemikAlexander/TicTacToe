@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="start_game">Le début du match</string>
+    <string name="settings_game">Paramètre</string>
+    <string name="win_game_string">Vous gagnez!</string>
+    <string name="lose_game_string">Vous perdez!</string>
+    <string name="again_game">Jouer à nouveau?</string>
+    <string name="draw_game_string">Tirage au sort!</string>
+    <string name="single_game_mode">Solo</string>
+    <string name="multiplayer_game_mode">Multijoueur</string>
+    <string name="x_player_win_game">Le joueur X a gagner!</string>
+    <string name="o_player_win">Joueur o gagner!</string>
+    <string name="save_settings">Enregistrer les paramètres</string>
+    <string name="language_string">Langue</string>
+</resources>

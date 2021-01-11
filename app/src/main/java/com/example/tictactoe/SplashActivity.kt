@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.util.*
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +19,22 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        val lan = pref.getString("language", null)
+        if (lan != null)
+            setLocale(this, lan)
+
         GlobalScope.launch {
             delay(3000)
             startActivity<MenuActivity>()
             finish()
         }
+    }
+
+    private fun setLocale(context: Context, locale: String) {
+        context.resources.configuration.locale = Locale(locale)
+        context.resources.updateConfiguration(
+                context.resources.configuration,
+                context.resources.displayMetrics
+        )
     }
 }

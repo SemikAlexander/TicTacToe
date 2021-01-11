@@ -3,69 +3,57 @@ package com.example.tictactoe
 import java.util.*
 import kotlin.collections.ArrayList
 
-public fun getComputerMove(board: ArrayList<String>): Int {
+fun getComputerMove(board: ArrayList<String>): Int {
 
     //check if computer can win in this move
-    for (i in 0 until board.count()){
-        var copy: ArrayList<String> = getBoardCopy(board)
-        if(copy[i] == "") {
+    for (i in 0 until board.count()) {
+        val copy = getBoardCopy(board)
+        if (copy[i] == "") {
             copy[i] = "O"
-            if (result(copy, "O"))
+            if (isGameOver(copy, "O"))
                 return i
         }
     }
 
     //check if player could win in the next move
-    for (i in 0 until board.count()){
-        var copy2 = getBoardCopy(board)
-        if(copy2[i] == "") {
+    for (i in 0 until board.count()) {
+        val copy2 = getBoardCopy(board)
+        if (copy2[i] == "") {
             copy2[i] = "X"
-            if (result(copy2, "X"))
+            if (isGameOver(copy2, "X"))
                 return i
         }
     }
 
     //try to take corners if its free
-    var move = choseRandomMove(board, arrayListOf<Int>(0, 2, 6, 8))
-    if(move != -1)
+    val move = choseRandomMove(board, arrayListOf(0, 2, 6, 8))
+    if (move != -1)
         return move
 
     //try to take center if its free
-    if(board[4] == "") return 4
+    if (board[4] == "") return 4
 
     //move on one of the sides
-    return choseRandomMove(board, arrayListOf<Int>(1, 3, 5, 7))
+    return choseRandomMove(board, arrayListOf(1, 3, 5, 7))
 }
 
-
-public fun choseRandomMove(board: ArrayList<String>, list: ArrayList<Int>): Int {
-    var possibleMoves = arrayListOf<Int>()
-    for (i in list){
-        if(board[i] == "") possibleMoves.add(i)
-    }
-    if(possibleMoves.isEmpty()) return -1
+fun choseRandomMove(board: ArrayList<String>, list: ArrayList<Int>): Int {
+    val possibleMoves =
+            list.filter { board[it] == "" }
+    return if (possibleMoves.isEmpty()) -1
     else {
-        var index = Random().nextInt(possibleMoves.count())
-        return possibleMoves[index]
+        val index = Random().nextInt(possibleMoves.count())
+        possibleMoves[index]
     }
 }
 
-public fun getBoardCopy(board: ArrayList<String>): ArrayList<String> {
-    var bd = arrayListOf<String>("", "", "", "", "", "", "", "", "")
-    for (i in 0 until board.count()) {
-        bd[i] = board[i]
-    }
-    return bd
-}
+fun getBoardCopy(board: ArrayList<String>) =
+        ArrayList(board.toList())
 
-public fun isBoardFull(board: ArrayList<String>): Boolean {
-    for (i in board)
-        if(i != "X" && i != "O")
-            return false
-    return true
-}
+fun isBoardFull(board: ArrayList<String>) =
+    board.none { i -> i != "X" && i != "O" }
 
-public fun result(bd: ArrayList<String>, s: String): Boolean =
+fun isGameOver(bd: ArrayList<String>, s: String): Boolean =
     if(bd[0] == s && bd[1] == s && bd[2] == s) true
     else if(bd[3] == s && bd[4] == s && bd[5] == s) true
     else if(bd[6] == s && bd[7] == s && bd[8] == s) true

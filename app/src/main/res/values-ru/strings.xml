@@ -12,4 +12,5 @@
     <string name="x_player_win_game">Игрок X выиграл!</string>
     <string name="o_player_win">Игрок O выиграл!</string>
     <string name="save_settings">Сохранить настройки</string>
+    <string name="language_string">Язык</string>
 </resources>
