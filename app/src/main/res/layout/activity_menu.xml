@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/textview"
-        android:paddingTop="15dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
         android:gravity="center_horizontal"
+        android:paddingTop="15dp"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -45,6 +46,7 @@
                 android:backgroundTint="?attr/colorPrimaryVariant"
                 android:gravity="center_horizontal"
                 android:padding="15dp"
+                android:layout_marginRight="4dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/singleplayer"
                 android:textAlignment="center"
@@ -67,7 +69,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
-        
+
         <ImageButton
             android:id="@+id/settingsButton"
             android:layout_width="176dp"

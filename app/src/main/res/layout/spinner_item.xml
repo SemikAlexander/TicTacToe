@@ -2,10 +2,11 @@
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:background="?attr/colorPrimary"
     android:layout_height="wrap_content"
-    android:gravity="center"
+    android:background="?attr/colorPrimary"
+    android:fontFamily="casual"
+    android:gravity="right"
     android:padding="5dip"
     android:text="@string/app_name"
     android:textColor="#FFFFFF"
-    android:textSize="25sp"/>
+    android:textSize="25sp" />
