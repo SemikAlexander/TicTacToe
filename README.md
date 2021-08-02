@@ -1,14 +1,14 @@
 # TicTacToe
 Tic-tac-toe is a logical game between two opponents on a square field of 3 by 3 squares or larger (up to "infinite field"). One of the players plays "crosses", the second - "zeros". The traditional Chinese game (Gomoku) uses black and white stones.
 
-#### Rules of the game
+### Rules of the game
 
 Winning a game of tic-tac-toe
 Players take turns putting signs (one always crosses, the other always zeros) on free cells of a 3×3 field. The first one to line up 3 of his pieces vertically, horizontally or diagonally wins. The first move is made by the player putting crosses.
 
 Usually at the end of the game the winning side crosses out its three marks (zeros and crosses) making a continuous row.
 
-#### Analysis
+### Analysis
 
 For each side, algorithms are generally known that guarantee a draw for any opponent's play, and that if the opponent makes a mistake, he can win. Thus, the game is in a state of "draw death."
 
